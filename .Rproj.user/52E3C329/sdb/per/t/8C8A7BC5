@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "summary.var.select <- function(x, ...){\n  if (!inherits(x, \"var.select\"))\n    stop(\"Object must be class 'var.select'\")\n  num_models <- nrow(x$data.frame)\n  if (num_models > 10){\n    bottom_ten_index <- num_models - 10\n    cat(\"Top 10 models by adjusted R-squared:\\n\")\n    print(x$data.frame[1:10,])\n    cat(\"\\nBottom 10 models by adjusted R-squared:\\n\")\n    x$data.frame[bottom_ten_index:num_models,]\n  }\n  else print(x)\n  \n}",
+    "created" : 1507652092364.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2944587710",
+    "id" : "8C8A7BC5",
+    "lastKnownWriteTime" : 1507652801,
+    "last_content_update" : 1507652801886,
+    "path" : "~/Programs/r_work/running/summary.R",
+    "project_path" : "summary.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}
